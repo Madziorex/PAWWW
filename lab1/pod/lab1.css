@@ -1,0 +1,131 @@
+html, body
+{
+    margin: 0;
+    padding: 0;
+    padding-right: 20%;
+    padding-left: 20%;
+    font-family: Arial, sans-serif;
+}
+
+body 
+{
+    background-color: #500d0d;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.title
+{
+    background-color: #290505;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.title h1
+{
+    margin: 0;
+    padding: 0;
+    font-size: 36px;
+}
+
+.title h2 
+{
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+}
+
+.title h5
+{
+    margin: 0;
+    padding: 0;
+    font-weight: lighter;
+}
+
+.title h1 a
+{
+    text-decoration: none;
+    color: white;
+}
+
+.title h1 a:hover
+{
+    text-decoration: none;
+    color: white;
+    font-weight: 100;
+}
+
+.nav ul
+{
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.nav ul li
+{
+    margin: 0 20px;
+}
+
+.nav ul li a 
+{
+    text-decoration: none;
+    color: white;
+}
+
+.nav li:hover
+{
+	background: #290505;
+    background: radial-gradient(circle, #290505 0%, #500d0d 100%);
+    border-radius: 20%;
+    font-weight: bold;
+}
+
+.inf_ogl
+{
+    background-color: #290505;
+    padding: 20px;
+    color: white;
+}
+
+.inf_ogl h1
+{
+    text-align: center;
+}
+
+.kontakt
+{
+    color: white;
+    text-align: center;
+}
+
+.kontakt h2 {
+    margin-top: 20px;
+}
+
+form {
+    margin-top: 10px;
+}
+
+input[type="submit"] {
+    background-color: #290505;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+input[type="submit"]:hover {
+    background-color: #555;
+}
+
+img {
+	float: left;
+	margin: 5px;
+	border-radius: 20%;
+}
