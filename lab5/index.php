@@ -1,6 +1,15 @@
-<?
- error_reporting(E_ALL ^ E_NOTICE ^ E_WARNING);
- /* po tym komentarzu będzie kod do dynamicznego ładowania stron */
+<?php
+    error_reporting(E_ALL ^ E_NOTICE ^ E_WARNING);
+    if($_GET['idp'] == '') $strona = './html/glowna.html';
+    if($_GET['idp'] == 'bazyliszek') $strona = './html/bazyliszek.html';
+    if($_GET['idp'] == 'leszy') $strona = './html/leszy.html';
+    if($_GET['idp'] == 'him') $strona = './html/him.html';
+    if($_GET['idp'] == 'bies') $strona = './html/bies.html';
+    if($_GET['idp'] == 'poludnica') $strona = './html/poludnica.html';
+    if($_GET['idp'] == 'filmy') $strona = './html/filmy.html';
+    if($strona == null || !file_exists($strona)){
+        $strona = './html/glowna.html';
+    }
 ?>
 <!DOCTYPE html>
 <html lang="PL">
@@ -20,7 +29,7 @@
             <td class="title">
                 <div>
                     <h5><i>Moje hobby to gry, więc dałam coś z "Wiedźmina 3"</i></h5>
-                    <h1><a href="index.html">Bestiariusz</a></h1>
+                    <h1><a href="./index.php">Bestiariusz</a></h1>
                     <h2>Kilka potworów z gry "Wiedźmin 3: Dziki Gon"</h2>
                 </div>
             </td>
@@ -28,18 +37,20 @@
         <tr>
             <td class="nav">
                 <ul>
-                    <li><a href="./html/bazyliszek.html">Bazyliszek</a></li>
-                    <li><a href="./html/leszy.html">Leszy</a></li>
-                    <li><a href="./html/him.html">Him</a></li>
-                    <li><a href="./html/bies.html">Bies</a></li>
-                    <li><a href="./html/poludnica.html">Południca</a></li>
+                    <li><a href="./index.php?idp=bazyliszek">Bazyliszek</a></li>
+                    <li><a href="./index.php?idp=leszy">Leszy</a></li>
+                    <li><a href="./index.php?idp=him">Him</a></li>
+                    <li><a href="./index.php?idp=bies">Bies</a></li>
+                    <li><a href="./index.php?idp=poludnica">Południca</a></li>
+                    <li><a href="./index.php?idp=filmy">Filmy</a></li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td class="inf_ogl">
-                <!-- Treść strony wczytana z pliku glowna.html -->
-                <?php include($strona); ?>
+                <?php
+                    include($strona); 
+                ?>
             </td>
         </tr>
         <tr>

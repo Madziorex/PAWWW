@@ -188,3 +188,8 @@ input[type="button"]:hover
     user-select: none;
     margin: auto;
 }
+
+iframe
+{
+    justify-content: center;
+}
