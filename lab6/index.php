@@ -1,17 +1,14 @@
 <?php
     error_reporting(E_ALL ^ E_NOTICE ^ E_WARNING);
-    include('/cfg.php');
-    include('/showpage.php');
-    if($_GET['idp'] == '') $strona = './html/glowna.html';
-    if($_GET['idp'] == 'bazyliszek') $strona = './html/bazyliszek.html';
-    if($_GET['idp'] == 'leszy') $strona = './html/leszy.html';
-    if($_GET['idp'] == 'him') $strona = './html/him.html';
-    if($_GET['idp'] == 'bies') $strona = './html/bies.html';
-    if($_GET['idp'] == 'poludnica') $strona = './html/poludnica.html';
-    if($_GET['idp'] == 'filmy') $strona = './html/filmy.html';
-    if($strona == null || !file_exists($strona)){
-        $strona = './html/glowna.html';
-    }
+    include('./cfg.php');
+    include('./showpage.php');
+    if($_GET['idp'] == '') $strona = PokazPodstrone(1);
+    if($_GET['idp'] == 'bazyliszek') $strona = PokazPodstrone(2);
+    if($_GET['idp'] == 'leszy') $strona = PokazPodstrone(3);
+    if($_GET['idp'] == 'him') $strona = PokazPodstrone(4);
+    if($_GET['idp'] == 'bies') $strona = PokazPodstrone(5);
+    if($_GET['idp'] == 'poludnica') $strona = PokazPodstrone(6);
+    if($_GET['idp'] == 'filmy') $strona = PokazPodstrone(7);
 ?>
 <!DOCTYPE html>
 <html lang="PL">
@@ -51,7 +48,8 @@
         <tr>
             <td class="inf_ogl">
                 <?php
-                    include($strona); 
+                    echo $strona;
+                    //include($strona); 
                 ?>
             </td>
         </tr>
