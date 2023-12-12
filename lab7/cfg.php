@@ -1,12 +1,13 @@
 <?php
+    $login = "madzia";
+    $pass = "madzia123";
+
     $dbhost = 'localhost';
     $dbuser = 'root';
     $dbpass = '';
     $baza = 'moja_strona';
-    $login = 'madzia';
-    $pass = 'xd';
 
-    $link = mysqli_connect($dbhost, $dbuser, $dbpass, $baza);
+    $link = mysqli_connect($dbhost, $dbuser, $dbpass);
     if(!$link) echo '<b>przerwane połączenie</b>';
     if(!mysqli_select_db($link, $baza)) echo 'nie wybrano bazy';
 ?>
