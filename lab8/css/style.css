@@ -1,0 +1,248 @@
+html, body
+{
+    margin: 0;
+    padding: 0;
+    padding-right: 20%;
+    padding-left: 20%;
+    font-family: Arial, sans-serif;
+}
+
+body 
+{
+    background-color: #500d0d;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.title
+{
+    background-color: #290505;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.title h1
+{
+    margin: 0;
+    padding: 0;
+    font-size: 36px;
+}
+
+.title h2 
+{
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+}
+
+.title h5
+{
+    margin: 0;
+    padding: 0;
+    font-weight: lighter;
+}
+
+.title h1 a
+{
+    text-decoration: none;
+    color: white;
+}
+
+.title h1 a:hover
+{
+    text-decoration: none;
+    color: white;
+    font-weight: 100;
+}
+
+.nav ul
+{
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.nav ul li
+{
+    margin: 0 20px;
+}
+
+.nav ul li a 
+{
+    text-decoration: none;
+    color: white;
+}
+
+.nav li:hover
+{
+	background: #290505;
+    background: radial-gradient(circle, #290505 0%, #500d0d 100%);
+    border-radius: 20%;
+    font-weight: bold;
+}
+
+.inf_ogl
+{
+    background-color: #290505;
+    padding: 20px;
+    color: white;
+}
+
+.inf_ogl h1
+{
+    text-align: center;
+}
+
+.kontakt
+{
+    color: white;
+    text-align: center;
+}
+
+.kontakt h2 
+{
+    margin-top: 20px;
+}
+
+form {
+    margin-top: 10px;
+}
+
+input[type="submit"] 
+{
+    background-color: #290505;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+input[type="submit"]:hover 
+{
+    background-color: #555;
+}
+
+img 
+{
+	float: left;
+	margin: 5px;
+	border-radius: 20%;
+}
+
+input[type="button"] 
+{
+    background-color: #110202;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 5px;
+}
+
+input[type="button"]:hover 
+{
+    background-color: #555;
+}
+
+.kolor
+{
+    text-align: center;
+}
+
+.czas
+{
+    text-align: center;
+    padding: 10px;
+}
+
+.czas div
+{
+    background-color: #110202;
+    color: white;
+    padding: 5px;
+    font-weight: bold;
+}
+
+.test-block
+{
+    width: 200px;
+    border: 2px solid rgba(17,2,2, 1);
+    background: rgba(17,2,2, 0.7);
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    padding: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    margin: auto;
+}
+
+.test-block{
+    margin: auto;
+    width: 200px;
+    border: 2px solid #0056b3;
+    background: #007bff;
+    text-align: center;
+    color: #000;
+    padding: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.zalogowany{
+    color: #ffffff;
+    text-align: center;
+}
+
+.logowanie {
+    margin: 0 auto;
+    width: 50%;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+.zalogowany{
+    color: #ffffff;
+    text-align: center;
+}
+
+.logowanie{
+    margin: auto;
+}
+
+.heading{
+    text-align: center;
+}
+
+.lista_podstron table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.lista_podstron th, .lista_podstron td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.lista_podstron th {
+    background-color: #f2f2f2;
+}
