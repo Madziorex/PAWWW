@@ -5,15 +5,13 @@
     {
         $wynik = '
             <h1 class="heading">Panel CMS:</h1>
-            <div class="logowanie">
-                <form method="post" name="LoginForm" enctype="multipart/form-data" action="'.$_SERVER['REQUEST_RRI'].'">
-                    <table class="logowanie">
-                        <tr><td class="log4_t">[email]</td><td><input type="text" name="login_email" class="logowanie" /></td></tr>
-                        <tr><td class="log4_t">[haslo]</td><td><input type="password" name="login_pass" class="logowanie" /></td></tr>
-                        <tr><td>&nbsp;</td><td><input type="submit" name="x1_submit" class="logowanie" value="zaloguj" /></td></tr>
-                    </table>
-                </form>
-            </div>
+            <form method="post" name="LoginForm" enctype="multipart/form-data" action="'.$_SERVER['REQUEST_RRI'].'">
+                <table class="logowanie">
+                    <tr><td class="log4_t">[email]</td><td><input type="text" name="login_email" class="logowanie" /></td></tr>
+                    <tr><td class="log4_t">[haslo]</td><td><input type="password" name="login_pass" class="logowanie" /></td></tr>
+                    <tr><td>&nbsp;</td><td><input type="submit" name="x1_submit" class="logowanie" value="zaloguj" /></td></tr>
+                </table>
+            </form>
         ';
 
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -42,7 +40,7 @@
         $output = '<table><tr><td><div class="lista_podstron"><table>';
 
         while ($row = mysqli_fetch_assoc($result)) {
-            $output .= '<tr><td>' . $row['id'] . ' ' . $row['page_title'] . '</td></tr>';
+            $output .= '<tr class="srodek"><td>' . $row['id'] . ' ' . $row['page_title'] . '</td></tr>';
         }
 
         $output .= '</table></div></td><td>';
@@ -53,18 +51,24 @@
             <option value="dodaj">Dodaj</option>
             <option value="usun">Usuń</option>
         </select><br>
-        
-        <label for="id">ID:</label>
-        <input type="text" name="id">
-        
-        <label for="nowy_tytul">Nowy Tytuł:</label>
-        <input type="text" name="nowy_tytul" >
-        
-        <label for="nowa_zawartosc">Nowa Zawartość:</label>
-        <textarea name="nowa_zawartosc" rows="4" ></textarea>
-        
-        <label for="nowy_status">Nowy Status:</label>
-        <input type="text" name="nowy_status" >
+        <table class="operacje">
+        <tr>
+            <td><label for="id">ID:</label></td>
+            <td><input type="text" name="id"></td>
+        </tr>
+        <tr>
+            <td><label for="nowy_tytul">Nowy Tytuł:</label></td>
+            <td><input type="text" name="nowy_tytul" ></td>
+        </tr>
+        <tr>
+            <td><label for="nowa_zawartosc">Nowa Zawartość:</label></td>
+            <td><textarea name="nowa_zawartosc" rows="4" ></textarea></td>
+        </tr>
+        <tr>
+            <td><label for="nowy_status">Nowy Status:</label></td>
+            <td><input type="text" name="nowy_status" ></td>
+        </tr>
+        </table>
         
         <input type="submit" value="Wykonaj Operację">
         </form></div></td></tr></table>';

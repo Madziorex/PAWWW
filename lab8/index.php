@@ -145,6 +145,18 @@
                 </script>
             </td>
         </tr>
+        <tr class="kontakty">
+            <td>
+                <h2><u>Kontakt</u></h2>
+                    <form action="mailto:vixen172001@gmail.com" method="post" enctype="text/plain">
+                        Imię: <input type="text" name="imie"><br>
+                        Email: <input type="email" name="email"><br>
+                        Wiadomość:<br>
+                    <textarea name="wiadomosc" rows="5" cols="40"></textarea><br>
+                    <input type="submit" value="Wyślij">
+                    </form>
+            </td>
+        </tr>
     </table>
     <?php
         $nr_indeksu = '164442';
