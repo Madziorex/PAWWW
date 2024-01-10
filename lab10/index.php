@@ -11,6 +11,7 @@ include('./showpage.php');
 include('./admin/admin.php');
 include('./admin/kategorie_produkty.php');
 
+
 // Definiowanie idp
 if ($_GET['idp'] == '') {
     $strona = PokazPodstrone(1);
@@ -34,7 +35,8 @@ if ($_GET['idp'] == 'filmy') {
     $strona = PokazPodstrone(7);
 }
 if ($_GET['idp'] == 'produkty') {
-    $strona = WybierzOpcje($link);
+    
+    $strona = ZarzadzajKategoriami($link);
 }
 if ($_GET['idp'] == 'admin') {
     if ($_SESSION['login'] == null || $_SESSION['pass'] == null) {
@@ -83,7 +85,7 @@ if ($_GET['idp'] == 'admin') {
                     <li><a href="./index.php?idp=bies">Bies</a></li>
                     <li><a href="./index.php?idp=poludnica">Południca</a></li>
                     <li><a href="./index.php?idp=filmy">Filmy</a></li>
-                    <li><a href="./admin/kategorie_produkty.php">Produkty</a></li>
+                    <li><a href="./index.php?idp=produkty">Kategorie</a></li>
                     <li><a href="./index.php?idp=admin">Admin</a></li>
                 </ul>
             </td>
