@@ -11,7 +11,7 @@ $dbpass = '';
 $baza = 'moja_strona';
 
 // Połączenie z bazą danych
-$link = mysqli_connect($dbhost, $dbuser, $dbpass);
+$link = mysqli_connect($dbhost, $dbuser, $dbpass, $baza);
 
 // Sprawdzenie, czy udało się nawiązać połączenie
 if (!$link) {

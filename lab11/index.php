@@ -10,6 +10,7 @@ include('./cfg.php');
 include('./showpage.php');
 include('./admin/admin.php');
 include('./admin/kategorie_produkty.php');
+include('./admin/sklep.php');
 
 
 // Definiowanie idp
@@ -37,6 +38,10 @@ if ($_GET['idp'] == 'filmy') {
 if ($_GET['idp'] == 'produkty') {
     
     $strona = ZarzadzajKategoriami($link);
+}
+if ($_GET['idp'] == 'sklep') {
+    
+    $strona = ZarzadzajSklepem($link);
 }
 if ($_GET['idp'] == 'admin') {
     if ($_SESSION['login'] == null || $_SESSION['pass'] == null) {
@@ -86,6 +91,7 @@ if ($_GET['idp'] == 'admin') {
                     <li><a href="./index.php?idp=poludnica">Południca</a></li>
                     <li><a href="./index.php?idp=filmy">Filmy</a></li>
                     <li><a href="./index.php?idp=produkty">Kategorie</a></li>
+                    <li><a href="./index.php?idp=sklep">Sklep</a></li>
                     <li><a href="./index.php?idp=admin">Admin</a></li>
                 </ul>
             </td>
