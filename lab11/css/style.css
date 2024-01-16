@@ -200,10 +200,6 @@ input[type="button"]:hover
     border: 1px solid #ccc;
 }
 
-/* .logowanie{
-    margin: auto;
-} */
-
 .heading{
     text-align: center;
 }
@@ -231,4 +227,10 @@ input[type="button"]:hover
 .kontakty {
     color: white;
     text-align: center;
+}
+
+.zdjecie_sklep{
+    display: block;
+    margin-left: auto;
+    margin-right: auto
 }

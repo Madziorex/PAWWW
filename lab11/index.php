@@ -9,7 +9,6 @@ error_reporting(E_ALL ^ E_NOTICE ^ E_WARNING);
 include('./cfg.php');
 include('./showpage.php');
 include('./admin/admin.php');
-include('./admin/kategorie_produkty.php');
 include('./admin/sklep.php');
 
 
@@ -35,13 +34,9 @@ if ($_GET['idp'] == 'poludnica') {
 if ($_GET['idp'] == 'filmy') {
     $strona = PokazPodstrone(7);
 }
-if ($_GET['idp'] == 'produkty') {
-    
-    $strona = ZarzadzajKategoriami($link);
-}
 if ($_GET['idp'] == 'sklep') {
     
-    $strona = ZarzadzajSklepem($link);
+    $strona = pokazSklep();
 }
 if ($_GET['idp'] == 'admin') {
     if ($_SESSION['login'] == null || $_SESSION['pass'] == null) {
@@ -54,7 +49,7 @@ if ($_GET['idp'] == 'admin') {
             <form action="wyloguj.php" method="post">
                 <input type="submit" value="Wyloguj">
             </form>';
-        $strona = ListaPodstron($link);
+        $strona = Pokaz($link);
     }
 }
 ?>
@@ -90,7 +85,6 @@ if ($_GET['idp'] == 'admin') {
                     <li><a href="./index.php?idp=bies">Bies</a></li>
                     <li><a href="./index.php?idp=poludnica">Południca</a></li>
                     <li><a href="./index.php?idp=filmy">Filmy</a></li>
-                    <li><a href="./index.php?idp=produkty">Kategorie</a></li>
                     <li><a href="./index.php?idp=sklep">Sklep</a></li>
                     <li><a href="./index.php?idp=admin">Admin</a></li>
                 </ul>
