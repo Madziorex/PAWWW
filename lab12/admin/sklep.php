@@ -24,7 +24,7 @@ function pokazSklep()
 
     $output = '<form method="post" action="" enctype="multipart/form-data">';
     $output .= '<table border="1px" width="100%">';
-    $output .= '<tr><td>Zdjęcie</td><td>Nazwa</td><td>Opis</td><td>Waga</td><td>Kategoria</td><td>Cena</td><td>Akcja</td></tr>';
+    $output .= '<tr><td>Zdjęcie</td><td>Nazwa</td><td>Opis</td><td>Waga</td><td>Kategoria</td><td>Cena</td><td>Ilość sztuk</td><td>Akcja</td></tr>';
 
     while ($row = mysqli_fetch_assoc($result)) {
         $output .= '<tr>';
@@ -34,6 +34,7 @@ function pokazSklep()
         $output .= '<td>' . $row['gabaryt_produktu'] . ' kg</td>';
         $output .= '<td>' . $row['kategoria'] . '</td>';
         $output .= '<td>' . ($row['cena_netto'] + $row['podatek_vat']) . ' zł</td>';
+        $output .= '<td>' . $row['dostepne_sztuki'] . '</td>';
         $output .= '<td><input type="checkbox" name="produkt[' . $row['id_produktu'] . ']" value="' . $row['tytul'] . '|' . ($row['cena_netto'] + $row['podatek_vat']) . '">';
         $output .= '<input type="hidden" name="cena[' . $row['id_produktu'] . ']" value="' . ($row['cena_netto'] + $row['podatek_vat']) . '">';
         $output .= ' Dodaj do koszyka</td>';
@@ -101,10 +102,6 @@ function dodajDoKoszyka($produktId, $nazwa, $cena)
         'ile_sztuk' => 1, // Możesz dostosować ilość
         'data' => time(),
     );
-}
-
-function DodajKoszyk(){
-    
 }
 
 function usunZKoszyka(){

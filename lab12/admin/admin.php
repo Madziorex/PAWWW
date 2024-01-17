@@ -9,9 +9,9 @@ function FormularzLogowania()
         <h1 class="heading">Panel CMS:</h1>
         <form method="post" name="LoginForm" enctype="multipart/form-data" action="'.$_SERVER['REQUEST_RRI'].'">
             <table class="logowanie">
-                <tr><td class="log4_t">[email]</td><td><input type="text" name="login_email" class="logowanie" /></td></tr>
-                <tr><td class="log4_t">[haslo]</td><td><input type="password" name="login_pass" class="logowanie" /></td></tr>
-                <tr><td>&nbsp;</td><td><input type="submit" name="x1_submit" class="logowanie" value="zaloguj" /></td></tr>
+                <tr><td class="log4_t">Nazwa</td><td><input type="text" name="login_email" class="logowanie" /></td></tr>
+                <tr><td class="log4_t">Haslo</td><td><input type="password" name="login_pass" class="logowanie" /></td></tr>
+                <tr><td>&nbsp;</td><td><input type="submit" name="x1_submit" class="logowanie" value="Zaloguj" /></td></tr>
             </table>
         </form>
     ';
@@ -530,7 +530,6 @@ function ZarzadzajKategoriami($conn){
     <input type="submit" value="Wykonaj Operację">
     </form></div></td></tr></table>';
 
-    mysqli_free_result($result);
     return $output;
 }
 
